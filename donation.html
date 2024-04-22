@@ -7,6 +7,79 @@
     <link rel="stylesheet" href="donation.css">
 </head>
 <body>
-    
+    <form>
+        <fieldset>
+            <label for="donationName">Name:</label>
+            <input id="donationName" type="text">
+        </fieldset>
+        
+        <fieldset>
+            <label for="donationEmail">Email:</label>
+            <input id="donationEmail" type="email">
+        </fieldset>
+        
+        <fieldset>
+            <label for="donationPhone">Phone:</label>
+            <input id="donationPhone" type="tel">
+        </fieldset>
+
+        <fieldset id="donationSetup">
+            <p>Payment Type:</p>
+            <label for="paypal">Paypal:</label>
+            <input id="paypal" type="radio" name="paymentType" value="Paypal">
+
+            <label for="creditCard">Credit Card:</label>
+            <input id="creditCard" type="radio" name="paymentType" value="Credit Card">
+
+            <fieldset id="cardInfo">
+                <label for="cardNumber">Credit Card:</label>
+                <input id="cardNumber" type="number" required>
+                
+                <fieldset>
+                    <label for="expireMonth">Card Expiration:</label>
+                    <select name="expireMonth" id="expireMonth">
+                        <optgroup>
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </optgroup>                        
+                    </select>
+                    <label for="expireYear">/</label>
+                    <select name="expireYear" id="expireYear">
+                        <optgroup>
+                            <option value="">Year</option>
+                            <option value="01">2024</option>
+                            <option value="02">2025</option>
+                            <option value="03">2026</option>
+                            <option value="04">2027</option>
+                            <option value="05">2028</option>
+                            <option value="06">2029</option>
+                            <option value="07">2030</option>
+                        </optgroup>                        
+                    </select>
+                </fieldset>
+
+                <label for="cardCVS">CVV:</label>
+                <input id="cardCVS" type="number" required>
+            </fieldset>
+        </fieldset>
+        <fieldset id="donationAmountSection">
+            <label for="donationAmount">$</label>
+            <input id="donationAmount" type="number" required>
+            <p id="Min">Min amount is $1.00</p>
+        </fieldset>
+
+    </form>
+    <script src="javascript.js"></script>
 </body>
 </html>
