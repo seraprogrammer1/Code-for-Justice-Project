@@ -1,17 +1,22 @@
 * {
-    border: 0;
     padding: 0;
     margin: 0;
+    border: 0;
 }
 
 html {
-    height: 100dvh;
-    width: 100dvw;
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    min-height: 400px;
 }
 
 body {
     display: flex;
     height: 100%;
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
@@ -20,29 +25,50 @@ body {
 
 
 form {
-    height: 620px;
-    width: 350px;
+    height: auto;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: rgb(164, 244, 255);
+    border: 2px solid black;
 }
 
+fieldset {
+}
+
+fieldset input[type="text"], 
+fieldset input[type="email"], 
+fieldset input[type="number"],
+fieldset input[type="tel"]{
+    height: 18px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input:focus, input:hover{
+    outline: none;
+    background-color: lightyellow;
+}
+
+
 form > * {
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-size: medium;
 }
 
-#donationSetup > * {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: inherit;
+#expireMonth, #expireYear {
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
-#donationAmountSection {
-    margin-bottom: 0;
+#cardNumber {
+}
+#cardCVV {
+}
+
+#donationSetup > * {
+    font-size: inherit;
 }
 
 #Min {
@@ -55,6 +81,179 @@ form > * {
     display: none;
 }
 
+#donationAmount {
+    border: none;
+    max-width: 160px;
+}
+
 #creditCard:checked ~ #cardInfo {
     display: block;
+}
+
+#donationAmountSection > fieldset {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0;
+    max-width: 210px;
+}
+
+input[type="submit"] {
+    background-color: white;
+    padding: 2px 4px 2px 4px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+/* small phone */
+@media screen and (min-width: 300px){
+    form {
+        height: 540px;
+        width: 260px;
+        overflow: auto;
+    }
+    fieldset {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    fieldset input[type="text"], 
+    fieldset input[type="email"], 
+    fieldset input[type="number"],
+    fieldset input[type="tel"]{
+        width: 180px;
+    }
+    label {
+        margin-left: 10px;
+    }
+    p {
+        margin-left:10px;
+    }
+    #cardNumber {
+        width: 150px;
+    }
+    #cardCVV {
+        width: 195px;
+    }
+}
+/* Large phone */
+@media screen and (min-width: 400px){
+    form {
+        height: 600px;
+        width: 360px;
+        overflow: auto;
+        justify-content: space-evenly
+    }
+    fieldset {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    fieldset input[type="text"], 
+    fieldset input[type="email"], 
+    fieldset input[type="number"],
+    fieldset input[type="tel"]{
+        width: 220px;
+    }
+    label {
+        margin-left: 10px;
+    }
+    p {
+        margin-left:10px;
+    }
+    #cardNumber {
+        width: 185px;
+    }
+    #cardCVV {
+        width: 225px;
+    }
+}
+/* small tablet */
+@media screen and (min-width: 700px){
+    * {
+        font-size: 32px;
+    }
+    form {
+        height: 600px;
+        width: 640px;
+        overflow: auto;
+        justify-content: space-evenly
+    }
+    fieldset {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;    
+    }
+    
+    fieldset input[type="text"], 
+    fieldset input[type="email"], 
+    fieldset input[type="number"],
+    fieldset input[type="tel"]{
+        width: 420px;
+        height: 32px;
+    }
+    label {
+        margin-left: 10px;
+    }
+    p {
+        margin-left:10px;
+    }
+    #cardNumber {
+        width: 185px;
+        height: 32px;
+    }
+    #cardCVV {
+        width: 225px;
+         height: 32px;
+    }
+
+    #donationSetup {
+        font-size: 32px;
+    }
+}
+/* large tablet */
+@media screen and (min-width: 800px){
+    * {
+        font-size: 32px;
+    }
+    form {
+        height: 1050px;
+        width: 680px;
+        overflow: auto;
+        justify-content: space-evenly
+    } 
+    fieldset {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;    
+    }
+    
+    fieldset input[type="text"], 
+    fieldset input[type="email"], 
+    fieldset input[type="number"],
+    fieldset input[type="tel"]{
+        width: 420px;
+        height: 32px;
+    }
+    label {
+        margin-left: 10px;
+    }
+    p {
+        margin-left:10px;
+    }
+    #cardNumber {
+        width: 185px;
+        height: 32px;
+    }
+    #cardCVV {
+        width: 225px;
+         height: 32px;
+    }
+
+    #donationSetup {
+        font-size: 32px;
+    }
 }
