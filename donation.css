@@ -1,47 +1,173 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     border: 0;
-}
+    box-sizing: border-box;
+    font-family: "Roboto";
+  }
 
-html {
+  html {
     height: 100%;
     width: 100%;
-    min-width: 200px;
-    min-height: 400px;
-}
-
-body {
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
     display: flex;
-    height: 100%;
-    width: 100%;
-    min-width: 200px;
-    min-height: 200px;
-    justify-content: center;
+    flex-direction: column;
+    background-image: url(images/home/patch-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-grow: 1;
+  }
+  
+  /* NAVBAR STYLING START */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: lightgray;
-}
-
-
+    background-color: #d9d9d96c;
+    height: 55px;
+    color: white;
+  }
+  
+  .logo-title {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+    display: block;
+  }
+  
+  .home-hover:hover {
+    background-color: #3749729e;
+    height: 55px;
+  }
+  .about-hover:hover {
+    background-color: #3749729e;
+    height: 55px;
+  }
+  .testimonials-hover:hover {
+    background-color: #3749729e;
+    height: 55px;
+  }
+  .volunteer-hover:hover {
+    background-color: #3749729e;
+    height: 55px;
+    margin-right: 10px;
+  }
+  .donate-hover:active {
+    /* background-color: #9b03054b; */
+    height: 59px;
+  }
+  
+  #donate-nav {
+    background-color:rgb(184,11,12);
+    border: solid rgb(0, 0, 0) 1px;
+    height:55px;
+    font-weight: 400;
+  }
+  .search-bar {
+    margin-top: 15px;
+    border-radius: 50px;
+    background-color: #d9d9d96c;
+  }
+  .toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #374972;
+    border-radius: 10px;
+  }
+  
+  .logo-title {
+    color: #374972;
+    font-style: bold;
+    font-weight: 550;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  /* NAV STYLING END */
+  
+  /* FORM STYLING START */
 
 form {
     height: auto;
-    width: 200px;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(164, 244, 255);
-    border: 2px solid black;
+    background-color: #d9d9d9da;
+    border: 2px solid transparent;
+    border-radius: 20px;
 }
 
-fieldset {
+.flexRow {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+/* Gets the firstname, lastname, email, and phone number and adds padding */
+.flexRow > label {
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
-fieldset input[type="text"], 
-fieldset input[type="email"], 
-fieldset input[type="number"],
-fieldset input[type="tel"]{
+fieldset{
+    margin: 10px;
+}
+#nameHolder {
+    margin-top: 40px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"],
+input[type="tel"]{
     height: 18px;
     border: 2px solid black;
     border-radius: 5px;
@@ -52,7 +178,6 @@ input:focus, input:hover{
     background-color: lightyellow;
 }
 
-
 form > * {
     font-size: medium;
 }
@@ -62,16 +187,11 @@ form > * {
     border-radius: 5px;
 }
 
-#cardNumber {
-}
-#cardCVV {
-}
-
-#donationSetup > * {
+#Setup > * {
     font-size: inherit;
 }
 
-#Min {
+#minAmount {
     color: gray;
     font-size: small;
     text-align: center;
@@ -81,7 +201,7 @@ form > * {
     display: none;
 }
 
-#donationAmount {
+#Amount {
     border: none;
     max-width: 160px;
 }
@@ -90,7 +210,7 @@ form > * {
     display: block;
 }
 
-#donationAmountSection > fieldset {
+#AmountSection > fieldset {
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
@@ -103,157 +223,258 @@ input[type="submit"] {
     padding: 2px 4px 2px 4px;
     border: 2px solid black;
     border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-/* small phone */
+
+    /* FORM STYLING END */
+  
+  /* FOOTER STYLING START */
+  
+  .logo-title.footer{
+    background-color: #d9d9d9da;
+    position: relative;
+  margin: 0;
+  }
+  /* FOOTER STYLING END */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* MEDIA QUERIES- PAGE */
+  /* NAVBAR MEDIA QUERIES  */
+  @media (max-width: 1025px) {
+    .toggle-button {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul {
+  height: auto;
+      width:100%;
+      padding: 0;
+      flex-direction: column;
+  
+      background-color:#3749726d;
+    }
+    .navbar-links li {
+      text-align: center;
+    }
+  
+    .navbar-links li a {
+      padding: 0.5rem 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+  #donate-nav{
+    background-color:#37497200;
+    border: none;
+    color:#9B0305;
+  font-weight: 800;
+  
+  }
+   
+  .home-hover:hover {
+    background-color: #37497200;
+  }
+  .about-hover:hover {
+    background-color: #37497200;
+  }
+  .testimonials-hover:hover {
+    background-color: #37497200;
+    
+  }
+  .volunteer-hover:hover {
+    background-color: #37497200;
+  }
+  .donate-hover:active {
+    /* background-color: #9b03054b; */
+    height: 59px;
+  }
+  
+  
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+  height: 50rem;
+  }
+  
+  
+  
+  
+  
+  #donate-nav {
+     display:flex;
+     justify-content: center;
+  align-items: center;
+      max-height:53px;
+      width: 100px;
+    margin:5px;
+    padding: 0;
+    margin-left:215px;} 
+  }
+
+  /* small phone */
 @media screen and (min-width: 300px){
     form {
-        height: 540px;
-        width: 260px;
+        /* height: 540px;
+        width: 260px; */
         overflow: auto;
     }
     fieldset {
-        padding-top: 5px;
+        /* padding-top: 5px;
         padding-bottom: 5px;
         margin-top: 5px;
-        margin-bottom: 5px;
+        margin-bottom: 5px; */
     }
-    fieldset input[type="text"], 
-    fieldset input[type="email"], 
-    fieldset input[type="number"],
-    fieldset input[type="tel"]{
-        width: 180px;
+    input[type="text"], 
+    input[type="email"], 
+    input[type="number"],
+    input[type="tel"]{
+        /* width: 180px; */
     }
     label {
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     p {
-        margin-left:10px;
+        /* margin-left:10px; */
     }
     #cardNumber {
-        width: 150px;
+        /* width: 150px; */
     }
     #cardCVV {
-        width: 195px;
+        /* width: 195px; */
     }
 }
 /* Large phone */
 @media screen and (min-width: 400px){
     form {
-        height: 600px;
-        width: 360px;
+        /* height: 600px;
+        width: 360px; */
         overflow: auto;
         justify-content: space-evenly
     }
     fieldset {
-        padding-top: 10px;
+        /* padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; */
     }
-    fieldset input[type="text"], 
-    fieldset input[type="email"], 
-    fieldset input[type="number"],
-    fieldset input[type="tel"]{
-        width: 220px;
+    input[type="text"], 
+    input[type="email"], 
+    input[type="number"],
+    input[type="tel"]{
+        /* width: 220px; */
     }
     label {
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     p {
-        margin-left:10px;
+        /* margin-left:10px; */
     }
     #cardNumber {
-        width: 185px;
+        /* width: 185px; */
     }
     #cardCVV {
-        width: 225px;
+        /* width: 225px; */
     }
 }
 /* small tablet */
 @media screen and (min-width: 700px){
-    * {
-        font-size: 32px;
-    }
     form {
-        height: 600px;
-        width: 640px;
+        /* height: 600px;
+        width: 640px; */
         overflow: auto;
         justify-content: space-evenly
     }
     fieldset {
-        padding-top: 10px;
+        /* padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 10px;
-        margin-bottom: 10px;    
+        margin-bottom: 10px;     */
     }
     
-    fieldset input[type="text"], 
-    fieldset input[type="email"], 
-    fieldset input[type="number"],
-    fieldset input[type="tel"]{
-        width: 420px;
-        height: 32px;
+    input[type="text"], 
+    input[type="email"], 
+    input[type="number"],
+    input[type="tel"]{
+        /* width: 420px;
+        height: 32px; */
     }
     label {
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     p {
-        margin-left:10px;
+        /* margin-left:10px; */
     }
     #cardNumber {
-        width: 185px;
-        height: 32px;
+        /* width: 185px;
+        height: 32px; */
     }
     #cardCVV {
-        width: 225px;
-         height: 32px;
+        /* width: 225px;
+         height: 32px; */
     }
 
-    #donationSetup {
-        font-size: 32px;
+    #Setup {
+        /* font-size: 32px; */
     }
 }
 /* large tablet */
 @media screen and (min-width: 800px){
-    * {
-        font-size: 32px;
-    }
     form {
-        height: 1050px;
-        width: 680px;
+        /* height: 1050px;
+        width: 680px; */
         overflow: auto;
         justify-content: space-evenly
     } 
     fieldset {
-        padding-top: 10px;
+        /* padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 10px;
-        margin-bottom: 10px;    
+        margin-bottom: 10px;     */
     }
     
-    fieldset input[type="text"], 
-    fieldset input[type="email"], 
-    fieldset input[type="number"],
-    fieldset input[type="tel"]{
-        width: 420px;
-        height: 32px;
+    input[type="text"], 
+    input[type="email"], 
+    input[type="number"],
+    input[type="tel"]{
+        /* width: 420px;
+        height: 32px; */
     }
     label {
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     p {
-        margin-left:10px;
+        /* margin-left:10px; */
     }
     #cardNumber {
-        width: 185px;
-        height: 32px;
+        /* width: 185px;
+        height: 32px; */
     }
     #cardCVV {
-        width: 225px;
-         height: 32px;
+        /* width: 225px;
+         height: 32px; */
     }
 
-    #donationSetup {
-        font-size: 32px;
+    #Setup {
+        /* font-size: 32px; */
     }
 }

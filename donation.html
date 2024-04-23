@@ -1,83 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="donation.css">
-</head>
-<body>
-    <form>
-        <fieldset>
-            <label for="donationName">Name:</label>
-            <input id="donationName" type="text">
-        </fieldset>
-        
-        <fieldset>
-            <label for="donationEmail">Email:</label>
-            <input id="donationEmail" type="email">
-        </fieldset>
-        
-        <fieldset>
-            <label for="donationPhone">Phone:</label>
-            <input id="donationPhone" type="tel">
-        </fieldset>
-        <fieldset id="donationSetup">
-                <p>Payment Type:</p>
-                <label for="paypal">Paypal:</label>
-                <input id="paypal" type="radio" name="paymentType" value="Paypal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vetern Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"/>
     
-                <label for="creditCard">Credit Card:</label>
-                <input id="creditCard" type="radio" name="paymentType" value="Credit Card">
-                <fieldset id="cardInfo">
-                    <label for="cardNumber">Credit Card:</label>
-                    <input id="cardNumber" type="number" required>
-                    
-                    <fieldset>
-                        <label for="expireMonth">Card Expiration:</label>
-                        <select name="expireMonth" id="expireMonth" required>
-                            <option value="" selected disabled>Month</option>
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>                  
-                        </select>
-                        <label for="expireYear">/</label>
-                        <select name="expireYear" id="expireYear" required>
-                            <option value="" selected disabled>Year</option>
-                            <option value="01">2024</option>
-                            <option value="02">2025</option>
-                            <option value="03">2026</option>
-                            <option value="04">2027</option>
-                            <option value="05">2028</option>
-                            <option value="06">2029</option>
-                            <option value="07">2030</option>                    
-                        </select>
-                    </fieldset>
-                    <label for="cardCVV">CVV:</label>
-                    <input id="cardCVV" type="number" required>
-                </fieldset>
+      <link rel="stylesheet" href="donation.css" />
+     
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-title">
+            <img src="images/home/veterensHelp-Logo.png" class="nav-logo" />
+            Veterens Help
+            </div>
 
-        </fieldset>
-        <fieldset id="donationAmountSection">
-            <fieldset>
-                <label for="donationAmount">$</label>
-                <input id="donationAmount" type="number" required>
+            <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </a>
+
+            <div class="navbar-links">
+            <ul>
+                <li class="home-hover"><a href="home.html">Home</a></li>
+                <li class="about-hover"><a href="aboutUs.html">About Us</a></li>
+                <li class="testimonials-hover"><a href="testimonial.html">Testimonials</a></li>
+                <li class="volunteer-hover"><a href="volunteer.html">Volunteer</a></li>
+                <li class="search-hover">
+                <input type="text" placeholder="Search.." class="search-bar"/>
+                </li>
+                <li class="donate-hover">
+                <a href=".html" id="donate-nav">Donate</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <fieldset id="nameHolder" class="flexRow">
+                <label for="firstName">First name:</label>
+                <input id="firstName" type="text" name="Firstname">
+                <label for="lastName">Last name:</label>
+                <input id="lastName" type="text" name="Lastname">
             </fieldset>
-            <p id="Min">Min amount is $1.00</p>
-        </fieldset>
+            
+            <fieldset class="flexRow">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email">
+                <label for="phone">Phone:</label>
+                <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+            </fieldset>
 
-        <label for="submit"></label>
-        <input id="submit" type="submit">
-    </form>
-    <script src="javascript.js"></script>
-</body>
+            <fieldset id="setup">
+                    <p name="paymentType">Payment Type:</p>
+                    <label for="paypal">Paypal:</label>
+                    <input id="paypal" type="radio" name="paymentType" value="Paypal">
+        
+                    <label for="creditCard">Credit Card:</label>
+                    <input id="creditCard" type="radio" name="paymentType" value="Credit Card">
+                    
+                    <fieldset id="cardInfo">
+                        <label for="cnn">Credit Card:</label>
+                        <input id="cnn" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" type="tel" required>
+                        
+                        <fieldset>
+                            <label for="expireMonth">Card Expiration:</label>
+                            <select name="expireMonth" id="expireMonth" required>
+                                <option value="" selected disabled>Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>                  
+                            </select>
+                            <label for="expireYear">/</label>
+                            <select name="expireYear" id="expireYear" required>
+                                <option value="" selected disabled>Year</option>
+                                <option value="01">2024</option>
+                                <option value="02">2025</option>
+                                <option value="03">2026</option>
+                                <option value="04">2027</option>
+                                <option value="05">2028</option>
+                                <option value="06">2029</option>
+                                <option value="07">2030</option>                    
+                            </select>
+                        </fieldset>
+                        <label for="cardCVV">CVV:</label>
+                        <input id="cardCVV" type="number" required>
+                    </fieldset>
+    
+            </fieldset>
+            <fieldset id="AmountSection">
+                <fieldset>
+                    <label for="Amount">$</label>
+                    <input id="Amount" type="number" required>
+                </fieldset>
+                <p id="minAmount">Minimum of $1.00</p>
+            </fieldset>
+    
+            <label for="submit"></label>
+            <input id="submit" type="submit">
+        </form>
+    </main>
+   
+    <footer>
+        <div class="logo-title footer">
+        <img src="images/home/veterensHelp-Logo.png" class="nav-logo" />
+        Veterens Help
+      </div>
+    
+    </footer>  
+
+    <script src="javascript.js" defer ></script>
+  </body>     
 </html>
