@@ -1,481 +1,459 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
 
-  html {
-    height: 100%;
-    width: 100%;
-  }
-  
-  body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url(images/home/patch-background.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+html {
+  height: 100%;
+  width: 100%;
+}
 
-  main {
-    display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-grow: 1;
-  }
-  
-  /* NAVBAR STYLING START */
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d9d9d96c;
-    height: 55px;
-    color: white;
-  }
-  
-  .logo-title {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-  }
-  
-  .navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar-links li {
-    list-style: none;
-  }
-  
-  .navbar-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    padding: 1rem;
-    display: block;
-  }
-  
-  .home-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-  }
-  .about-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-  }
-  .testimonials-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-  }
-  .volunteer-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-    margin-right: 10px;
-  }
-  .donate-hover:active {
-    /* background-color: #9b03054b; */
-    height: 59px;
-  }
-  
-  #donate-nav {
-    background-color:rgb(184,11,12);
-    border: solid rgb(0, 0, 0) 1px;
-    height:55px;
-    font-weight: 400;
-  }
-  .search-bar {
-    margin-top: 15px;
-    border-radius: 50px;
-    background-color: #d9d9d96c;
-  }
-  .toggle-button {
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: #374972;
-    border-radius: 10px;
-  }
-  
-  .logo-title {
-    color: #374972;
-    font-style: bold;
-    font-weight: 550;
-    letter-spacing: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .nav-logo {
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* NAV STYLING END */
-  
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/home/patch-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+main > div {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+main > div > div {
+  flex-grow: 1;
+  max-width: 1140px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main > p {
+  text-align: center;
+}
+
+/* NAVBAR STYLING START */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d96c;
+  height: 55px;
+  color: white;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  display: block;
+}
+
+.home-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.about-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.testimonials-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.volunteer-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+  margin-right: 10px;
+}
+.donate-hover:active {
+  /* background-color: #9b03054b; */
+  height: 59px;
+}
+
+#donate-nav {
+  background-color:rgb(184,11,12);
+  border: solid rgb(0, 0, 0) 1px;
+  height:55px;
+  font-weight: 400;
+}
+.search-bar {
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #d9d9d96c;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #374972;
+  border-radius: 10px;
+}
+
+.logo-title {
+  color: #374972;
+  font-style: bold;
+  font-weight: 100;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+}
+
+/* NAV STYLING END */
+
   /* FORM STYLING START */
 
-form {
-    height: auto;
-    width: auto;
+  form{
+    max-width: 1140px;
+    height: 400px;
+
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #d9d9d9da;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    font-size: medium;
-}
-/* Give fieldset display flex */
-.flexRow {
-    display: flex;
     flex-grow: 1;
-    justify-content: center;
-}
-/* Gets the firstname, lastname, email, and phone number and adds padding */
-fieldset > label {
-    padding-left: 10px;
-    padding-right: 5px;
-}
 
-/* input highlight */
-input:focus, input:hover{
-    outline: none;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+    background-color: #d9d9d9da;
+    border: 2px solid #b9b9b9;
+
+    overflow: auto;
+  }
+
+  /* recaptcha */
+  form > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #other-amount-enter-holder {
+    display: none;
+  }
+
+  #other-amount-enter {
+    max-width: 75px;
+  }
+
+  #donateHolder{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #donateHolder > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  input:focus{
+    outline: 0;
     background-color: lightyellow;
-}
+  }
 
-.one-hundred {
-    width: 100%;
-}
-#street {
-    margin-right: 10px;
-}
-
-.ten-px-margin{
-    margin: 10px;
-}
-#nameHolder {
+  #contactHolder > h2 {
     margin-top: 40px;
-}
+  }
 
-#firstName {
-
-}
-
-#lastName {
-
-}
-
-#email {
-
-}
-
-#phone{
-    text-align: center;
-}
-
-#weekDay, #time {
-
-}
-#street {
-
-}
-
-#city {
-
-}
-
-#state {
-
-}
-
-#zip {
-
-}
-
-
-input[type="submit"] {
-    background-color: white;
-    padding: 2px 4px 2px 4px;
-    border: 2px solid black;
-    border-radius: 5px;
+  #paymentHolder > h2 {
     margin-top: 40px;
-    margin-bottom: 40px;
-}
-/* FORM STYLING END */
+    margin-bottom: 10px;
+  }
+  
+  #paymentHolder {
+    background-color: yellow;
+  }
+
+  #donateFrequencyHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #donateFrequencyHolder > span {
+    margin-top: 10px;
+  }
+
+  .small-gray-p-tag {
+    font-size: 10px;
+    color: rgb(146, 146, 146);
+    margin-bottom: 20px;
+  }
+
+  other-amount-enter-holder{
+    display: none;
+  }
+
+  other-amount-enter {
+    height: 46px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #phone {
+    max-width: 105px;
+  }
+
+  #cnn {
+    max-width: 140px;
+  }
+
+  #cvv {
+    max-width: 45px;
+  }
+
+  .set {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .set > span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #submitHolder {
+    display: flex;
+    justify-content: center;
+  }
+  #submit {
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+
+    /* FORM STYLING END */
 
 /* FOOTER STYLING START */
 
 .logo-title.footer{
-    background-color: #d9d9d9da;
-    position: relative;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  min-height: 40px;
+}
+
+footer {
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+/* FOOTER STYLING END */
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES- PAGE */
+/* NAVBAR MEDIA QUERIES  */
+@media (max-width: 1025px) {
+  .toggle-button {
+    display: flex;
   }
 
-  footer {
-    position: absolute;
-    bottom: 0;
+  .navbar-links {
+    display: none;
     width: 100%;
   }
-  /* FOOTER STYLING END */
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* MEDIA QUERIES- PAGE */
-  /* NAVBAR MEDIA QUERIES  */
-  @media (max-width: 1025px) {
-    .toggle-button {
-      display: flex;
-    }
-  
-    .navbar-links {
-      display: none;
-      width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .navbar-links ul {
-  height: auto;
-      width:100%;
-      padding: 0;
-      flex-direction: column;
-  
-      background-color:#3749726d;
-    }
-    .navbar-links li {
-      text-align: center;
-    }
-  
-    .navbar-links li a {
-      padding: 0.5rem 1rem;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-    }
-  
-  #donate-nav{
-    background-color:#37497200;
-    border: none;
-    color:#9B0305;
-  font-weight: 800;
-  
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-   
-  .home-hover:hover {
-    background-color: #37497200;
-  }
-  .about-hover:hover {
-    background-color: #37497200;
-  }
-  .testimonials-hover:hover {
-    background-color: #37497200;
-    
-  }
-  .volunteer-hover:hover {
-    background-color: #37497200;
-  }
-  .donate-hover:active {
-    /* background-color: #9b03054b; */
-    height: 59px;
-  }
-  
-  
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  height: 50rem;
-  }
-  
-  
-  
-  
-  
-  #donate-nav {
-     display:flex;
-     justify-content: center;
-  align-items: center;
-      max-height:53px;
-      width: 100px;
-    margin:5px;
+  .navbar-links ul {
+height: auto;
+    width:100%;
     padding: 0;
-    margin-left:215px;} 
+    flex-direction: column;
+
+    background-color:#3749726d;
+  }
+  .navbar-links li {
+    text-align: center;
   }
 
-  /* small phone */
-@media screen and (min-width: 300px){
-    form {
-        /* height: 540px;
-        width: 260px; */
-        overflow: auto;
-    }
-    fieldset {
-        /* padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px; */
-    }
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 180px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 150px; */
-    }
-    #cardCVV {
-        /* width: 195px; */
-    }
-}
-/* Large phone */
-@media screen and (min-width: 400px){
-    form {
-        /* height: 600px;
-        width: 360px; */
-        overflow: auto;
-        justify-content: space-evenly
-    }
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px; */
-    }
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 220px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px; */
-    }
-    #cardCVV {
-        /* width: 225px; */
-    }
-}
-/* small tablet */
-@media screen and (min-width: 700px){
-    form {
-        /* height: 600px;
-        width: 640px; */
-        overflow: auto;
-        justify-content: space-evenly
-    }
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;     */
-    }
-    
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 420px;
-        height: 32px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px;
-        height: 32px; */
-    }
-    #cardCVV {
-        /* width: 225px;
-         height: 32px; */
-    }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
 
-    #Setup {
-        /* font-size: 32px; */
-    }
-}
-/* large tablet */
-@media screen and (min-width: 800px){
-    form {
-        /* height: 1050px;
-        width: 680px; */
-        overflow: auto;
-        justify-content: space-evenly
-    } 
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;     */
-    }
-    
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 420px;
-        height: 32px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px;
-        height: 32px; */
-    }
-    #cardCVV {
-        /* width: 225px;
-         height: 32px; */
-    }
+  .navbar-links.active {
+    display: flex;
+  }
 
-    #Setup {
-        /* font-size: 32px; */
-    }
+#donate-nav{
+  background-color:#37497200;
+  border: none;
+  color:#9B0305;
+font-weight: 800;
+
+}
+ 
+.home-hover:hover {
+  background-color: #37497200;
+}
+.about-hover:hover {
+  background-color: #37497200;
+}
+.testimonials-hover:hover {
+  background-color: #37497200;
+  
+}
+.volunteer-hover:hover {
+  background-color: #37497200;
+}
+.donate-hover:active {
+  /* background-color: #9b03054b; */
+  height: 59px;
+}
+
+
+
+
+#donate-nav {
+   display:flex;
+   justify-content: center;
+align-items: center;
+    max-height:53px;
+    width: 100px;
+  margin:5px;
+  padding: 0;
+  margin-left:215px;} 
+}
+
+@media (min-width: 600px) {
+  .set {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #email-grow {
+    flex-grow: 1;
+    margin-right: 40px;
+  }
+
+  #nameHolder {
+    display: flex;
+  }
+  #nameHolder > span {
+    flex-grow: 1;
+  }
+  #nameHolder > span[name="Firstname"] {
+    margin: 0 40px 0 0;
+  }
+
+  #cardHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cardHolder > span {
+    margin-top: 10px;
+  }
+
+  .grow {
+    display: flex;
+  }
+
+  .grow > span {
+    flex-grow: 1;
+  }
+  #state-span{
+    margin: 0 40px 0 40px;
+  }
+  #states {
+  }
+  #postal-code {
+  }
+}
+@media (max-width: 599px){
+  #nameHolder{
+    display: flex;
+    flex-direction: column;
+  }
+  #addressHolder > fieldset{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 20px;
+  }
+
+  .space{
+    margin-top: 20px;
+  }
+
+  #cardHolder{
+    display: flex;
+    flex-direction: column;
+  }
 }

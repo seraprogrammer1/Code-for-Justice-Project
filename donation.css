@@ -1,165 +1,200 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
 
-  html {
-    height: 100%;
-    width: 100%;
-  }
-  
-  body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-image: url(images/home/patch-background.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+html {
+  height: 100%;
+  width: 100%;
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     flex-grow: 1;
-  }
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/home/patch-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  main > div {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* NAVBAR STYLING START */
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d9d9d96c;
-    height: 55px;
-    color: white;
-  }
-  
-  .logo-title {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-  }
-  
-  .navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .navbar-links li {
-    list-style: none;
-  }
-  
-  .navbar-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    padding: 1rem;
-    display: block;
-  }
-  .navbar-links li a:hover {
-    color: #3749729e;
-    text-decoration: underline;
-  }
-  
-  .home-hover:hover {
-  }
-  .about-hover:hover {
-    height: 55px;
-  }
-  .testimonials-hover:hover {
-    height: 55px;
-  }
-  .volunteer-hover:hover {
-    height: 55px;
-  }
-  .donate-hover:active {
-    /* background-color: #9b03054b; */
-    height: 59px;
-  }
-  
-  #donate-nav {
-    background-color:rgb(184,11,12);
-    height:55px;
-    font-weight: 400;
-  }
-  .search-bar {
-    margin-top: 15px;
-    border-radius: 50px;
-    background-color: #d9d9d96c;
-  }
-  .toggle-button {
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: #374972;
-    border-radius: 10px;
-  }
-  
-  .logo-title {
-    color: #374972;
-    font-style: bold;
-    font-weight: 550;
-    letter-spacing: 5px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .nav-logo {
-    height: 50px;
-    width: 50px;
-  }
-  
-  /* NAV STYLING END */
-  
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+main > div {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+main > div > div {
+  flex-grow: 1;
+  max-width: 1140px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main > p {
+  text-align: center;
+}
+
+/* NAVBAR STYLING START */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d96c;
+  height: 55px;
+  color: white;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  display: block;
+}
+
+.home-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.about-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.testimonials-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.volunteer-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+  margin-right: 10px;
+}
+.donate-hover:active {
+  /* background-color: #9b03054b; */
+  height: 59px;
+}
+
+#donate-nav {
+  background-color:rgb(184,11,12);
+  border: solid rgb(0, 0, 0) 1px;
+  height:55px;
+  font-weight: 400;
+}
+.search-bar {
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #d9d9d96c;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #374972;
+  border-radius: 10px;
+}
+
+.logo-title {
+  color: #374972;
+  font-style: bold;
+  font-weight: 100;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+}
+
+/* NAV STYLING END */
+
   /* FORM STYLING START */
 
   form{
+    max-width: 1140px;
+    height: 400px;
+
+
     display: flex;
-    height: 500px;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 1140px;
+
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+
     background-color: #d9d9d9da;
     border: 2px solid #b9b9b9;
-    padding: 20px;
-    margin-bottom: 5px;
+
     overflow: auto;
   }
 
+  /* recaptcha */
   form > div {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
+  #other-amount-enter-holder {
+    display: none;
+  }
+
+  #other-amount-enter {
+    max-width: 75px;
+  }
+
   #donateHolder{
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #donateHolder > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   input:focus{
@@ -167,7 +202,11 @@
     background-color: lightyellow;
   }
 
-  h2 {
+  #contactHolder > h2 {
+    margin-top: 40px;
+  }
+
+  #paymentHolder > h2 {
     margin-top: 40px;
     margin-bottom: 10px;
   }
@@ -179,6 +218,12 @@
 
   #donateFrequencyHolder > span {
     margin-top: 10px;
+  }
+
+  .small-gray-p-tag {
+    font-size: 10px;
+    color: rgb(146, 146, 146);
+    margin-bottom: 20px;
   }
 
   other-amount-enter-holder{
@@ -199,214 +244,212 @@
     border-radius: 4px;
   }
 
+  #phone {
+    max-width: 105px;
+  }
+
+  #cnn {
+    max-width: 140px;
+  }
+
+  #cvv {
+    max-width: 45px;
+  }
+
+  .set {
+    display: flex;
+    margin-top: 20px;
+  }
+
   .set > span {
     display: flex;
     flex-direction: column;
   }
 
-    /* FORM STYLING END */
-  
-  /* FOOTER STYLING START */
-  
-  .logo-title.footer{
-    background-color: #d9d9d9da;
-    position: relative;
-    margin: 0;
-    height: 100%;
+  #submitHolder {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 10px;
-    text-align: center;
-    font-size: 10px;
+  }
+  #submit {
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
   }
 
-  footer {
-    position: relative;
-    bottom: 0;
+    /* FORM STYLING END */
+
+/* FOOTER STYLING START */
+
+.logo-title.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  min-height: 40px;
+}
+
+footer {
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+/* FOOTER STYLING END */
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES- PAGE */
+/* NAVBAR MEDIA QUERIES  */
+@media (max-width: 1025px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
     width: 100%;
   }
 
-  /* FOOTER STYLING END */
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* MEDIA QUERIES- PAGE */
-  /* NAVBAR MEDIA QUERIES  */
-  @media (max-width: 1025px) {
-    .toggle-button {
-      display: flex;
-    }
-  
-    .navbar-links {
-      display: none;
-      width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .navbar-links ul {
-  height: auto;
-      width:100%;
-      padding: 0;
-      flex-direction: column;
-  
-      background-color:#3749726d;
-    }
-    .navbar-links li {
-      text-align: center;
-    }
-  
-    .navbar-links li a {
-      padding: 0.5rem 1rem;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-    }
-  
-  #donate-nav{
-    background-color:#37497200;
-    border: none;
-    color:#9B0305;
-  font-weight: 800;
-  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-   
-  .home-hover:hover {
-    background-color: #37497200;
-  }
-  .about-hover:hover {
-    background-color: #37497200;
-  }
-  .testimonials-hover:hover {
-    background-color: #37497200;
-    
-  }
-  .volunteer-hover:hover {
-    background-color: #37497200;
-  }
-  .donate-hover:active {
-    /* background-color: #9b03054b; */
-    height: 59px;
-  }
-  
-  
-  /* body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  height: 50rem;
-  } */
-  
-  
-  
-  
-  
-  #donate-nav {
-     display:flex;
-     justify-content: center;
-  align-items: center;
-      max-height:53px;
-      width: 100px;
-    margin:5px;
+  .navbar-links ul {
+height: auto;
+    width:100%;
     padding: 0;
-    margin-left:215px;} 
-  }
-
-
-/* @media (min-width: 1200px){
-
-  form {
-    display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    width: 1140px;
-    margin-bottom: 10px;
+
+    background-color:#3749726d;
+  }
+  .navbar-links li {
+    text-align: center;
   }
 
-.set > span {
-  display: flex;
-  flex-direction: column;
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+#donate-nav{
+  background-color:#37497200;
+  border: none;
+  color:#9B0305;
+font-weight: 800;
+
 }
-
-
-
-  #donateHolder {
-    font-size: 18px;
-    flex-grow: 1;
-    background-color: purple;
-  }
-
-  #donateHolder > fieldset {
-    flex-grow: 1;
-  }
-
-  #donateFrequencyHolder {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: yellowgreen;
-  }
-
-  #donateFrequencyHolder > span {
-    margin-top: 10px;
-  }
-
-  addressHolder{
-    display: flex;
-    flex-direction: column;
-  }
-
-  #cityStateZipHolder {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  #cityStateZipHolder > span {
-    margin-top: 10px;
-  }
-
-  #other-amount-enter {
-    height: 46px;
-    width: 100px;
-  }
-  #contactHolder {
-    flex-grow: 2;
-    background-color: green;
-  }
-  #contactHolder > legend {
-    font-size: 2em;
-  }
-  #contactHolder > p {
-    font-size: .65em;
-  }
-  #paymentHolder > legend {
-    font-size: 2em;
-  }
-  #paymentHolder{
-    flex-grow: 1;
-    background-color: brown;
-  }
-
-} */
-
-@media (max-width: 400px){
+ 
+.home-hover:hover {
+  background-color: #37497200;
+}
+.about-hover:hover {
+  background-color: #37497200;
+}
+.testimonials-hover:hover {
+  background-color: #37497200;
   
 }
-
-@media (max-width: 1200px){
-
+.volunteer-hover:hover {
+  background-color: #37497200;
+}
+.donate-hover:active {
+  /* background-color: #9b03054b; */
+  height: 59px;
 }
 
-@media (max-width: 1600px){
 
+
+
+#donate-nav {
+   display:flex;
+   justify-content: center;
+align-items: center;
+    max-height:53px;
+    width: 100px;
+  margin:5px;
+  padding: 0;
+  margin-left:215px;} 
+}
+
+@media (min-width: 600px) {
+  .set {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #email-grow {
+    flex-grow: 1;
+    margin-right: 40px;
+  }
+
+  #nameHolder {
+    display: flex;
+  }
+  #nameHolder > span {
+    flex-grow: 1;
+  }
+  #nameHolder > span[name="Firstname"] {
+    margin: 0 40px 0 0;
+  }
+
+  #cardHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cardHolder > span {
+    margin-top: 10px;
+  }
+
+  .grow {
+    display: flex;
+  }
+
+  .grow > span {
+    flex-grow: 1;
+  }
+  #state-span{
+    margin: 0 40px 0 40px;
+  }
+  #states {
+  }
+  #postal-code {
+  }
+}
+@media (max-width: 599px){
+  #nameHolder{
+    display: flex;
+    flex-direction: column;
+  }
+  #addressHolder > fieldset{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 20px;
+  }
+
+  .space{
+    margin-top: 20px;
+  }
+
+  #cardHolder{
+    display: flex;
+    flex-direction: column;
+  }
 }
