@@ -143,7 +143,8 @@ margin-bottom: 0;
 
 
 
-
+/* .list-wrapper{
+z-index: 20;} */
 
 
 /* FOOTER STYLING END */
@@ -213,7 +214,7 @@ margin-bottom: 0;
   top: 20%;
   transform: translateY(-50%);
   z-index: 20;
-background:rgba(0, 0, 0, 0.73);
+  background:rgba(0, 0, 0, 0.73);
   color: rgb(160, 160, 160);
   border: none;
   height: 25px;
@@ -337,7 +338,6 @@ height: auto;
     width:100%;
     padding: 0;
     flex-direction: column;
-
     background-color:#3749726d;
   }
   .navbar-links li {
@@ -348,9 +348,19 @@ height: auto;
     padding: 0.5rem 1rem;
   }
 
+
+  /* Navbar fix?  */
   .navbar-links.active {
+  
     display: flex;
+    position: absolute;
+    z-index: 40;
+    height: 500vh;
+    background-color: #000000;
   }
+ 
+
+
 
 #donate-nav{
   background-color:#37497200;
@@ -423,7 +433,49 @@ align-items: center;
   }
 }
 
+@media (min-width:320px){
+  .navbar {
+    font-size:35px;
+  }
+ .navbar-links{
+  margin-top: 59px;
+ }
+ 
+ .navbar-links a{
+  margin-top: 45px;
+ }
+
+ #donate-nav {
+  margin-top:40px;
+  margin-left: 110px;
+font-size:35px;
+
+}
+
+
+
+
+}
+
+
 @media (min-width: 375px) {
+  
+  #donate-nav {
+    margin-left: 134px;
+
+  }
+  
+  .navbar {
+    font-size:35px;
+  }
+ .navbar-links{
+  margin-top: 55px;
+ }
+ 
+ .navbar-links a{
+  margin-top: 40px;
+ }
+ 
   .logo-title {
     font-size: 25px;
   
@@ -486,7 +538,11 @@ align-items: center;
 
   @media(min-width:425px){
 
-
+    #donate-nav {
+      margin-left: 160px;
+  
+    }
+    
     #mission-statement{
       font-size: 20px;
       margin-top: 50px;}
@@ -511,7 +567,10 @@ align-items: center;
   }
 
   @media(min-width:768px){
-
+    #donate-nav {
+      margin-left: 330px;
+  
+    }
 
     #mission-statement{
       font-size: 40px;
@@ -591,7 +650,15 @@ align-items: center;
 
 
   @media(min-width:1024px){
-  .red-middle-container{
+    #donate-nav {
+      margin-left: 459px;
+  
+    }
+
+  
+  
+  
+    .red-middle-container{
       height:300 px;
       margin-top: 300px;
    
@@ -640,6 +707,23 @@ align-items: center;
   
 
 @media(min-width:1440px){
+  
+#img4{
+  height:500px;
+}
+
+.navbar{
+  font-size: 25px;
+}
+
+  .navbar-links{
+
+margin-top: -60px;
+}
+  
+  
+  
+  
   .stories-container{
    
     flex-direction: row;
@@ -671,10 +755,11 @@ align-items: center;
   #donate-nav {
     background-color:rgb(184,11,12);
     /* border: solid rgb(0, 0, 0) 1px; */
-    height: 68px;
-    margin-top: -19.5px;
+    height: 66px;
+    margin-top: 40px;
     /* font-weight: 500; */
     font-size: 25px;
+    margin-left: 0;
   }
 }
 
