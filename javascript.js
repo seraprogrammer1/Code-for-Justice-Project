@@ -19,6 +19,6 @@ function changeSlide(direction) {
     
     // Set new active class
     images[newIndex].classList.add('active');
-  }
-  
-  
+}
+
+

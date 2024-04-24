@@ -23,9 +23,17 @@
 
   main {
     display: flex;
+    flex-direction: column;
      justify-content: center;
      align-items: center;
      flex-grow: 1;
+  }
+
+  main > div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
   
   /* NAVBAR STYLING START */
@@ -61,23 +69,21 @@
     padding: 1rem;
     display: block;
   }
+  .navbar-links li a:hover {
+    color: #3749729e;
+    text-decoration: underline;
+  }
   
   .home-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
   }
   .about-hover:hover {
-    background-color: #3749729e;
     height: 55px;
   }
   .testimonials-hover:hover {
-    background-color: #3749729e;
     height: 55px;
   }
   .volunteer-hover:hover {
-    background-color: #3749729e;
     height: 55px;
-    margin-right: 10px;
   }
   .donate-hover:active {
     /* background-color: #9b03054b; */
@@ -86,7 +92,6 @@
   
   #donate-nav {
     background-color:rgb(184,11,12);
-    border: solid rgb(0, 0, 0) 1px;
     height:55px;
     font-weight: 400;
   }
@@ -134,98 +139,70 @@
   
   /* FORM STYLING START */
 
-form {
-    height: auto;
-    width: auto;
+  form{
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 1140px;
+    background-color: #d9d9d9da;
+    border: 2px solid #b9b9b9;
+    padding: 20px;
+    margin-bottom: 5px;
+    overflow: auto;
+  }
+
+  form > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #donateHolder{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #d9d9d9da;
-    border: 2px solid transparent;
-    border-radius: 20px;
-}
+  }
 
-.flexRow {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-}
-/* Gets the firstname, lastname, email, and phone number and adds padding */
-.flexRow > label {
-    padding-left: 10px;
-    padding-right: 5px;
-}
-
-fieldset{
-    margin: 10px;
-}
-#nameHolder {
-    margin-top: 40px;
-}
-
-input[type="text"], 
-input[type="email"], 
-input[type="number"],
-input[type="tel"]{
-    height: 18px;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-input:focus, input:hover{
-    outline: none;
+  input:focus{
+    outline: 0;
     background-color: lightyellow;
-}
+  }
 
-form > * {
-    font-size: medium;
-}
-
-#expireMonth, #expireYear {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-#Setup > * {
-    font-size: inherit;
-}
-
-#minAmount {
-    color: gray;
-    font-size: small;
-    text-align: center;
-}
-
-#cardInfo {
-    display: none;
-}
-
-#Amount {
-    border: none;
-    max-width: 160px;
-}
-
-#creditCard:checked ~ #cardInfo {
-    display: block;
-}
-
-#AmountSection > fieldset {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 0;
-    max-width: 210px;
-}
-
-input[type="submit"] {
-    background-color: white;
-    padding: 2px 4px 2px 4px;
-    border: 2px solid black;
-    border-radius: 5px;
+  h2 {
     margin-top: 40px;
-    margin-bottom: 40px;
-}
+    margin-bottom: 10px;
+  }
+
+  #donateFrequencyHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #donateFrequencyHolder > span {
+    margin-top: 10px;
+  }
+
+  other-amount-enter-holder{
+    display: none;
+  }
+
+  other-amount-enter {
+    height: 46px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .set > span {
+    display: flex;
+    flex-direction: column;
+  }
 
     /* FORM STYLING END */
   
@@ -234,8 +211,22 @@ input[type="submit"] {
   .logo-title.footer{
     background-color: #d9d9d9da;
     position: relative;
-  margin: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
   }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
   /* FOOTER STYLING END */
   
   
@@ -310,11 +301,11 @@ input[type="submit"] {
   }
   
   
-  body {
+  /* body {
     background-repeat: no-repeat;
     background-size: cover;
   height: 50rem;
-  }
+  } */
   
   
   
@@ -331,150 +322,91 @@ input[type="submit"] {
     margin-left:215px;} 
   }
 
-  /* small phone */
-@media screen and (min-width: 300px){
-    form {
-        /* height: 540px;
-        width: 260px; */
-        overflow: auto;
-    }
-    fieldset {
-        /* padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 5px;
-        margin-bottom: 5px; */
-    }
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 180px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 150px; */
-    }
-    #cardCVV {
-        /* width: 195px; */
-    }
-}
-/* Large phone */
-@media screen and (min-width: 400px){
-    form {
-        /* height: 600px;
-        width: 360px; */
-        overflow: auto;
-        justify-content: space-evenly
-    }
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px; */
-    }
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 220px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px; */
-    }
-    #cardCVV {
-        /* width: 225px; */
-    }
-}
-/* small tablet */
-@media screen and (min-width: 700px){
-    form {
-        /* height: 600px;
-        width: 640px; */
-        overflow: auto;
-        justify-content: space-evenly
-    }
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;     */
-    }
-    
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 420px;
-        height: 32px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px;
-        height: 32px; */
-    }
-    #cardCVV {
-        /* width: 225px;
-         height: 32px; */
-    }
 
-    #Setup {
-        /* font-size: 32px; */
-    }
-}
-/* large tablet */
-@media screen and (min-width: 800px){
-    form {
-        /* height: 1050px;
-        width: 680px; */
-        overflow: auto;
-        justify-content: space-evenly
-    } 
-    fieldset {
-        /* padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;     */
-    }
-    
-    input[type="text"], 
-    input[type="email"], 
-    input[type="number"],
-    input[type="tel"]{
-        /* width: 420px;
-        height: 32px; */
-    }
-    label {
-        /* margin-left: 10px; */
-    }
-    p {
-        /* margin-left:10px; */
-    }
-    #cardNumber {
-        /* width: 185px;
-        height: 32px; */
-    }
-    #cardCVV {
-        /* width: 225px;
-         height: 32px; */
-    }
+/* @media (min-width: 1200px){
 
-    #Setup {
-        /* font-size: 32px; */
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 1140px;
+    margin-bottom: 10px;
+  }
+
+.set > span {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+  #donateHolder {
+    font-size: 18px;
+    flex-grow: 1;
+    background-color: purple;
+  }
+
+  #donateHolder > fieldset {
+    flex-grow: 1;
+  }
+
+  #donateFrequencyHolder {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: yellowgreen;
+  }
+
+  #donateFrequencyHolder > span {
+    margin-top: 10px;
+  }
+
+  addressHolder{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cityStateZipHolder {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #cityStateZipHolder > span {
+    margin-top: 10px;
+  }
+
+  #other-amount-enter {
+    height: 46px;
+    width: 100px;
+  }
+  #contactHolder {
+    flex-grow: 2;
+    background-color: green;
+  }
+  #contactHolder > legend {
+    font-size: 2em;
+  }
+  #contactHolder > p {
+    font-size: .65em;
+  }
+  #paymentHolder > legend {
+    font-size: 2em;
+  }
+  #paymentHolder{
+    flex-grow: 1;
+    background-color: brown;
+  }
+
+} */
+
+@media (max-width: 400px){
+  
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 1600px){
+
 }

@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="volunteer.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vetern Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"/>
     
-</body>
+      <link rel="stylesheet" href="volunteer.css" />
+     
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-title">
+            <img src="images/home/veterensHelp-Logo.png" class="nav-logo" />
+            Veterens Help
+            </div>
+
+            <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </a>
+
+            <div class="navbar-links">
+            <ul>
+                <li class="home-hover"><a href="home.html">Home</a></li>
+                <li class="about-hover"><a href="aboutUs.html">About Us</a></li>
+                <li class="testimonials-hover"><a href="testimonial.html">Testimonials</a></li>
+                <li class="volunteer-hover"><a href="volunteer.html">Volunteer</a></li>
+                <li class="donate-hover">
+                <a href="donation.html" id="donate-nav">Donate</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <fieldset id="nameHolder" class="flexRow ten-px-margin">
+                <label for="firstName">First name:</label>
+                <input id="firstName" type="text" name="Firstname">
+                <label for="lastName">Last name:</label>
+                <input id="lastName" type="text" name="Lastname">
+            </fieldset>
+            
+            <fieldset class="flexRow ten-px-margin">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <label for="phone">Phone:</label>
+                <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            </fieldset>
+            <fieldset>
+                <label for="weekDay">Best time to contact:</label>
+                <select name="weekDay" id="weekDay" required>
+                    <option value="" selected disabled>Day</option>
+                    <option value="01">Monday</option>
+                    <option value="02">Tuesday</option>
+                    <option value="03">Wednesday</option>
+                    <option value="04">Thursday</option>
+                    <option value="05">Friday</option>
+                    <option value="06">Saturday</option>
+                    <option value="07">Sunday</option>
+                </select>                    
+                <label for="time">/</label>
+                <select name="time" id="time" required>
+                    <option value="" selected disabled>Time</option>
+                    <option value="09:00">9:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                </select>
+            </fieldset>
+            
+            <fieldset class="flexRow one-hundred ten-px-margin">
+                <label for="street">Street:</label>
+                <input id="street" type="text" name="street">
+            </fieldset>
+
+            <fieldset class="flexRow ten-px-margin">
+                <label for="city">City:</label>
+                <input id="city" type="text" name="city">
+                <label for="state">State:</label>
+                <input id="state" type="text" name="state">
+                <label for="zip">Zip:</label>
+                <input id="zip" type="text" name="zip">
+            </fieldset>
+
+            <label for="submit"></label>
+            <input id="submit" type="submit">
+        </form>
+    </main>
+   
+    <footer>
+        <div class="logo-title footer">
+        <img src="images/home/veterensHelp-Logo.png" class="nav-logo" />
+        Veterens Help
+      </div>
+    
+    </footer>  
+
+    <script src="javascript.js" defer ></script>
+  </body>     
 </html>
