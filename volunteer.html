@@ -44,59 +44,7 @@
         <p>place some text here please</p>
         <div>
             <div>
-                <form action="" onsubmit="return verify()" method="">
-                    <fieldset id="donateHolder">
-                        <h5>Donate amounts</h5>
-                        <fieldset>
-                            <input checked type="radio" id="donate-5" class="radio-other" name="donate">
-                            <label for="donate-5">5$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-10" class="radio-other" name="donate">
-                            <label for="donate-10">10$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-15" class="radio-other" name="donate">
-                            <label for="donate-15">15$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-25" class="radio-other" name="donate">
-                            <label for="donate-25">25$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-50" class="radio-other" name="donate">
-                            <label for="donate-50">50$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-100" class="radio-other" name="donate">
-                            <label for="donate-100">100$</label>
-                        </fieldset>
-                    
-                        <fieldset>
-                            <input type="radio" id="donate-other" name="donate">
-                            <label for="donate-other">Other</label>
-                            <fieldset id="other-amount-enter-holder">
-                                <label for="other-amount-enter">$</label>
-                                <input type="text" id="other-amount-enter" name="donate">
-                            </fieldset>
-                        </fieldset>
-                    </fieldset>
-                    <fieldset id="donateFrequencyHolder">
-                        <h4>Giving Frequency</h4>
-                        <span>
-                            <input checked type="radio" id="donate-one-time" name="frequency">
-                            <label for="donate-one-time">One-Time</label>
-                        </span>
-                        <span>
-                            <input type="radio" id="donate-monthly" name="frequency">
-                            <label for="donate-monthly">Monthly</label>
-                        </span>
-                    </fieldset>       
+                <form action="" onsubmit="return verify()" method="">      
                     <fieldset id="contactHolder">
                         <h2>Contact Information</h2>
                         <p class="small-gray-p-tag">* indicates a required field</p>
@@ -195,65 +143,86 @@
                                     <input id="email" type="email" name="email" required>
                                 </span>
                                 <span>
-                                    <label for="phone">Phone:</label>
-                                    <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" >
+                                    <label for="phone">Phone*</label>
+                                    <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" required>
                                 </span>
                            </fieldset>
                         </fieldset>
-                    </fieldset>  
-                    <fieldset id="paymentHolder">
-                        <h2>Payment Information</h2>
-                        <select name="payment-type" class="remove-required" required>
-                            <option value="" selected>Select a Payment Type</option>
-                            <option value="Visa">Visa</option>
-                            <option value="MasterCard">MasterCard</option>
-                            <option value="American Express">American Express</option>
-                            <option value="Discover">Discover</option>
-                        </select>
-                        <fieldset id="cardHolder" class="set">
-                            <span>
-                                <label for="cnn">Credit Card Number</label>
-                                <input id="cnn" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" type="tel" class="remove-required" required>
-                            </span>
-                            <span>
-                                <fieldset>
-                                    <p class="space">Expiration Date</p>
-                                    <label for="expire-month"></label>
-                                    <select name="expire-month" id="expire-month" class="remove-required" required>
-                                        <option value="" selected disabled>Month</option>
-                                        <option value="01">January</option>
-                                        <option value="02">February</option>
-                                        <option value="03">March</option>
-                                        <option value="04">April</option>
-                                        <option value="05">May</option>
-                                        <option value="06">June</option>
-                                        <option value="07">July</option>
-                                        <option value="08">August</option>
-                                        <option value="09">September</option>
-                                        <option value="10">October</option>
-                                        <option value="11">November</option>
-                                        <option value="12">December</option>                  
-                                    </select>
-                                    <label for="expire-year"></label>
-                                    <select name="expire-year" id="expire-year" class="remove-required"  required>
-                                        <option value="" selected disabled>Year</option>
-                                        <option value="01">2024</option>
-                                        <option value="02">2025</option>
-                                        <option value="03">2026</option>
-                                        <option value="04">2027</option>
-                                        <option value="05">2028</option>
-                                        <option value="06">2029</option>
-                                        <option value="07">2030</option>                    
-                                    </select>
-                                </fieldset>
-                            </span>
-        
-                            <span>
-                                <label for="cvv">CVV Number</label>
-                                <input id="cvv" type="number" class="remove-required" required>
-                            </span>
-                        </fieldset>
+                    </fieldset> 
+                    <fieldset id="best-contactHolder">
+                        <h5>What is the best way to contact you?</h5>
+                        <span>
+                            <input checked type="radio" id="best-phone" name="best-contact">
+                            <label for="best-phone">Email</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="best-phone" name="best-contact">
+                            <label for="best-phone">Phone</label>
+                        </span>
                     </fieldset>
+                    <fieldset id="availabilityHolder" class="set">
+                        <span>
+                            <h5 class="space">What is the best time for us to contact you?</h5>
+                            <label for="availability-time"></label>
+                            <select class="" id="availability-time" name="availability-time">
+                                <option value="" selected>-Please Select-</option>
+                                <option value="09:00 AM">9:00 AM</option>
+                                <option value="09:30 AM">9:30 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="10:30 AM">10:30 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="11:30 AM">11:30 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="12:30 PM">12:30 PM</option>
+                                <option value="01:00 PM">1:00 PM</option>
+                                <option value="01:30 PM">1:30 PM</option>
+                                <option value="02:00 PM">2:00 PM</option>
+                                <option value="02:30 PM">2:30 PM</option>
+                                <option value="03:00 PM">3:00 PM</option>
+                                <option value="03:30 PM">3:30 PM</option>
+                                <option value="04:00 PM">4:00 PM</option>
+                                <option value="04:30 PM">4:30 PM</option>
+                                <option value="05:00 PM">5:00 PM</option>
+                                <option value="05:30 PM">5:30 PM</option>
+                                <option value="06:00 PM">6:00 PM</option>
+                                <option value="06:30 PM">6:30 PM</option>
+                                <option value="07:00 PM">7:00 PM</option>
+                                <option value="07:30 PM">7:30 PM</option>
+                                <option value="08:00 PM">8:00 PM</option>
+                            </select>                                
+                        </span>
+                    </fieldset>
+                    <fieldset id="best-dayHolder">
+                        <h5>What days are you constantly available?</h5>
+                        <fieldset>
+                            <input type="checkbox" id="monday" name="weekday">
+                            <label for="monday">Monday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="tuesday" name="weekday">
+                            <label for="tuesday">Tuesday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="wednesday" name="weekday">
+                            <label for="wednesday">Wednesday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="thursday" name="weekday">
+                            <label for="thursday">Thursday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="friday" name="weekday">
+                            <label for="friday">Friday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="saturday" name="weekday">
+                            <label for="saturday">Saturday</label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="sunday" name="weekday">
+                            <label for="sunday">Sunday</label>
+                        </fieldset>
+                    </fieldset>                     
                     <div class="g-recaptcha" data-sitekey="6LfAHcUpAAAAALwgRXF3d-R9yA663fE6u8BOEwc9"></div>
                     <fieldset id="submitHolder">
                         <label for="submit"></label>
@@ -276,6 +245,6 @@
     </footer>  
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="donation.js" defer ></script>
+    <script src="volunteer.js" defer ></script>
   </body>     
 </html>

@@ -187,13 +187,21 @@ main > p {
     max-width: 75px;
   }
 
-  #donateHolder{
+  #best-dayHolder{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
-  #donateHolder > * {
+  #best-dayHolder > * {
     margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #best-dayHolder > h5 {
+    margin-top: 20px;
+  }
+  #best-contactHolder > * {
+    margin-top: 20px;
     margin-bottom: 5px;
   }
 
@@ -203,7 +211,7 @@ main > p {
   }
 
   #contactHolder > h2 {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   #paymentHolder > h2 {
@@ -429,9 +437,10 @@ align-items: center;
   #state-span{
     margin: 0 40px 0 40px;
   }
-  #states {
-  }
-  #postal-code {
+
+  #availability-time {
+    max-width: 130px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 599px){
@@ -451,9 +460,15 @@ align-items: center;
   .space{
     margin-top: 20px;
   }
+  .small-space{
+    margin-top: 20px;
+  }
 
   #cardHolder{
     display: flex;
     flex-direction: column;
+  }
+  #availability-time {
+    max-width: 130px;
   }
 }
