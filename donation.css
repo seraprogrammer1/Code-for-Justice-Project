@@ -54,7 +54,7 @@ main > p {
   justify-content: space-between;
   align-items: center;
   background-color: #d9d9d96c;
-  height: 55px;
+  height: 65px;
   color: white;
 }
 
@@ -98,16 +98,19 @@ main > p {
   height: 55px;
   margin-right: 10px;
 }
-.donate-hover:active {
-  /* background-color: #9b03054b; */
+#donate-hover:active {
+  /* background-color: #1026ee4b; */
   height: 59px;
+ 
 }
 
 #donate-nav {
   background-color:rgb(184,11,12);
-  border: solid rgb(0, 0, 0) 1px;
-  height:55px;
-  font-weight: 400;
+  /* border: solid rgb(0, 0, 0) 1px; */
+  height: 68px;
+  margin-top: -10px;
+  /* font-weight: 500; */
+  font-size: 25px;
 }
 .search-bar {
   margin-top: 15px;
@@ -123,6 +126,8 @@ main > p {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+ 
+ 
 }
 
 .toggle-button .bar {
@@ -130,23 +135,27 @@ main > p {
   width: 100%;
   background-color: #374972;
   border-radius: 10px;
+
 }
 
 .logo-title {
   color: #374972;
+  margin-top: -3px;
   font-style: bold;
-  font-weight: 100;
-  letter-spacing: 0;
+  font-weight: 550;
+  letter-spacing: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: 15px;
+  font-size: 15px;
 }
 
 .nav-logo {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
+  margin-left:-27px;
 }
 
 /* NAV STYLING END */
@@ -245,7 +254,7 @@ main > p {
   }
 
   #phone {
-    max-width: 105px;
+    width: 135px;
   }
 
   #cnn {
@@ -330,7 +339,6 @@ height: auto;
     width:100%;
     padding: 0;
     flex-direction: column;
-
     background-color:#3749726d;
   }
   .navbar-links li {
@@ -341,9 +349,19 @@ height: auto;
     padding: 0.5rem 1rem;
   }
 
+
+  /* Navbar fix?  */
   .navbar-links.active {
+  
     display: flex;
+    position: absolute;
+    z-index: 40;
+    height: 500vh;
+    background-color: #000000;
   }
+ 
+
+
 
 #donate-nav{
   background-color:#37497200;
@@ -372,6 +390,14 @@ font-weight: 800;
 }
 
 
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+height: 50rem;
+}
+
+
+
 
 
 #donate-nav {
@@ -384,6 +410,7 @@ align-items: center;
   padding: 0;
   margin-left:215px;} 
 }
+
 
 @media (min-width: 600px) {
   .set {
@@ -424,10 +451,6 @@ align-items: center;
   }
   #state-span{
     margin: 0 40px 0 40px;
-  }
-  #states {
-  }
-  #postal-code {
   }
 }
 @media (max-width: 599px){
