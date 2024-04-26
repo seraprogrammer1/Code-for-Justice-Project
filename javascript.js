@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -34,3 +35,5 @@ const list = document.querySelector(".list");
     } else {
       list.scrollBy({ left: itemWidth, behavior: "smooth" });
     }}
+=======
+>>>>>>> Sera-Branch
