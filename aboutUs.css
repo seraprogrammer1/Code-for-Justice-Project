@@ -8,7 +8,10 @@
    html {
     height: 100%;
     width: 100%;
-   }
+   background-image: url(images/home/blurry-background\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
    
    /* NAVBAR STYLING START */
     .navbar {
@@ -101,63 +104,22 @@
    }
    /* NAV STYLING END */
 
-/
-  
-/* FOOTER STYLING START */
-/* footer {
-  background-color: #d9d9d96c; 
-  padding: 20px 0; 
-  text-align: center; 
-  bottom: 0;
-  width: 100%;
-} */
 
-.footer .logo-title {
+  
+.logo-title.footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; 
-  font-size: 1rem; 
-  color: #374972; 
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  min-height: 40px;
 }
-
-.footer span, .footer a {
-  color: #374972; 
-  text-decoration: none; 
-  margin: 0 5px; 
-}
-
-.footer .social-icons {
-  margin-top: 10px; /
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #9b0305; 
-  font-size: 24px; 
-}
-
-.footer-end {
-  font-size: 0.8rem;
-  color: #9B0305;
-  margin-top: 10px; 
-}
-/* FOOTER STYLING END */
-
 
 /* MEDIA QUERIES FOR RESPONSIVE FOOTER */
 @media (max-width: 768px) {
-  .footer .logo-title {
-    flex-direction: column; /* Stack logo and title vertically on smaller screens */
-  }
 
-  .social-icons {
-    flex-direction: column; /* Stack social icons vertically on smaller screens */
-  }
 }
 
 /* FOOTER STYLING END */
@@ -198,7 +160,8 @@
    
     .heading {
         text-align: center;
-        font-size: 42px;
+        font-size: 50px;
+     margin:75px;
     }
     
     #Aboutus h1 {
@@ -272,20 +235,11 @@
         left: 0;
         bottom: 0;
         width: 100%;
+        font-size:40px;
+        margin-top:600px;
     }
     
-   /* FOOTER STYLING START */
-   .logo-title.footer{
-    background-color: #d9d9d9da;
-    position: relative;
-    margin: 0;
-   }
-   footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-   }
-
+  
    
   .navbar-links.active {
   
@@ -363,7 +317,7 @@ margin-top: 5px;
  
  
   #quote{
-    margin-bottom: -300px;
+    margin-bottom: -900px;
   }
   #donate-nav {
     margin-left: 134px;
@@ -389,7 +343,7 @@ margin-top: 5px;
 
 
    .logo-title.footer{
-    margin-top: 350px;
+    margin-top: 1000px;
    
     }
 
@@ -397,6 +351,8 @@ margin-top: 5px;
 
   @media(min-width:425px){
 
+  
+  
     #donate-nav {
       margin-left: 160px;
   
@@ -415,17 +371,21 @@ margin-top: 5px;
         margin-left:-280px;
       }
     
-  
+      #quote{
+        margin-bottom: -1500px;
+           font-size:40px;
+    margin-top:500px;
+      }
+    
+    
+       .logo-title.footer{
+        margin-top: 1500px;
+       
+        }
   }
 
   @media(min-width:768px){
-    .footer .logo-title {
-      flex-direction: column; /* Stack logo and title vertically on smaller screens */
-    }
-  
-    .social-icons {
-      flex-direction: column; /* Stack social icons vertically on smaller screens */
-    }
+
   }
     
     

@@ -287,64 +287,25 @@
       border-radius: 4px;
     }
   
-      /* FORM STYLING END */
-  
-  /* FOOTER STYLING START */
-  
-  footer {
-    background-color: #d9d9d96c; 
-    padding: 20px 0; 
-    text-align: center; 
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer .logo-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    font-size: 1rem; 
-    color: #374972; 
-  }
-  
-  .footer span, .footer a {
-    color: #374972; 
-    text-decoration: none; 
-    margin: 0 5px; 
-  }
-  
-  .footer .social-icons {
-    margin-top: 10px; /
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #9b0305; 
-    font-size: 24px; 
-  }
-  
-  .footer-end {
-    font-size: 0.8rem;
-    color: #9B0305;
-    margin-top: 10px; 
-  }
-  /* FOOTER STYLING END */
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+     
+      
+.logo-title.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  min-height: 40px;
+}
+
+    
+    
+    
+    
+    /* FORM STYLING END */
   
   /* MEDIA QUERIES- PAGE */
   /* NAVBAR MEDIA QUERIES  */
@@ -610,21 +571,7 @@
   
   @media (min-width:768px){
     
-    .footer .logo-title {
-      flex-direction: column; /* Stack logo and title vertically on smaller screens */
-    }
-  
-    .social-icons {
-      flex-direction: column; /* Stack social icons vertically on smaller screens */
-    }
-  
-    
-    .logo-title.footer{
-    
-       font-size: 10px;
-       height: 200px;
-       width: 770px;}
-   
+
     
        #donate-nav {
       margin-left: 330px;
