@@ -8,7 +8,10 @@
    html {
     height: 100%;
     width: 100%;
-   }
+   background-image: url(images/home/blurry-background\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
    
    /* NAVBAR STYLING START */
     .navbar {
@@ -19,11 +22,6 @@
     height: 55px;
     color: white;
    } 
-   .logo-title {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    display: flex;
-   }
    .nav-logo {
     height: 40px;
     width: auto;
@@ -33,10 +31,9 @@
     margin: 0;
     padding: 0;
     display: flex;
-   }
-   .navbar-links li {
     list-style: none;
-   }
+  }
+   
    .navbar-links li a {
     text-decoration: none;
     color: white;
@@ -45,37 +42,36 @@
     display: block;
    }
    .home-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-   }
-   .about-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-   }
-   .testimonials-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-   }
-   .volunteer-hover:hover {
-    background-color: #3749729e;
-    height: 55px;
-    margin-right: 10px;
-   }
-   .donate-hover:active {
-    /* background-color: #9b03054b; */
+    text-decoration: underline;
+    color:#9B0305;
+  }
+  .about-hover:hover {
+    text-decoration: underline;
+    color:#9B0305;
+  }
+  .testimonials-hover:hover {
+    text-decoration: underline;
+    color:#9B0305;
+  }
+  .volunteer-hover:hover {
+    text-decoration: underline;
+    color:#9B0305;
+  }
+  #donate-hover:active {
+    /* background-color: #1026ee4b; */
     height: 59px;
-   }
-   #donate-nav {
+   
+  }
+  
+  #donate-nav {
     background-color:rgb(184,11,12);
-    border: solid rgb(0, 0, 0) 1px;
-    height:55px;
-    font-weight: 400;
-   }
-   .search-bar {
-    margin-top: 15px;
-    border-radius: 50px;
-    background-color: #d9d9d96c;
-   }
+    /* border: solid rgb(0, 0, 0) 1px; */
+    height: 68px;
+    margin-top: -10px;
+    /* font-weight: 500; */
+    font-size: 25px;
+  }
+  
    .toggle-button {
     position: absolute;
     top: 0.75rem;
@@ -100,8 +96,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
+    
    }
    .nav-logo {
     height: 50px;
@@ -109,6 +104,25 @@
    }
    /* NAV STYLING END */
 
+
+  
+.logo-title.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  min-height: 40px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+
+}
+
+/* FOOTER STYLING END */
 
     /* ABOUT US STYLING START */
 
@@ -146,7 +160,8 @@
    
     .heading {
         text-align: center;
-        font-size: 42px;
+        font-size: 50px;
+     margin:75px;
     }
     
     #Aboutus h1 {
@@ -220,26 +235,264 @@
         left: 0;
         bottom: 0;
         width: 100%;
+        font-size:40px;
+        margin-top:600px;
     }
     
-   /* FOOTER STYLING START */
-   .logo-title.footer{
-    background-color: #d9d9d9da;
-    position: relative;
-    margin: 0;
-   }
-   footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-   }
-
-   /* FOOTER STYLING END */
-
-   /*@media only screen and (max-width:480px) {
-#quote {
-    width:100%;
-}
-
-}
+  
    
+  .navbar-links.active {
+  
+    display: flex;
+    position: absolute;
+    z-index: 40;
+    height: 500vh;
+    background-color: #000000;
+  }
+ 
+ 
+
+  .navbar-links.active {
+  
+    display: flex;
+    position: absolute;
+    z-index: 40;
+    height: 500vh;
+    background-color: #000000;
+  }
+ 
+ 
+
+@media (min-width:320px){
+  .logo-title{
+    margin-left: 70px;
+    margin-top: -3px;
+  }
+  
+  .navbar {
+    font-size:35px;
+  }
+ .navbar-links{
+  margin-top: 59px;
+ }
+ 
+ .navbar-links a{
+  margin-top: 55px;
+ }
+
+#donate-nav {
+margin-top:400px;
+margin-left: 200px;
+font-size:35px;
+
+}
+
+.logo-title{
+
+font-size: 1.6rem;
+}
+
+
+.logo-title.footer{
+  height: 250px;
+ }}
+
+
+
+@media (min-width: 375px) {
+  
+ 
+.logo-title{
+  font-size: 25px;
+margin-left: 125px;
+margin-top: 5px;
+}
+
+
+  .nav-logo {
+    height: 40px;
+    width: 40px;
+
+  }
+ 
+ 
+  #quote{
+    margin-bottom: -900px;
+  }
+  #donate-nav {
+    margin-left: 134px;
+
+  }
+  
+  .navbar {
+    font-size:35px;
+  }
+ .navbar-links{
+  margin-top: 55px;
+ }
+ 
+
+ 
+
+
+  .nav-logo {
+    height: 35px;
+    width: 35px;
+    margin-left:-100px;
+  }
+
+
+   .logo-title.footer{
+    margin-top: 1000px;
+   
+    }
+
+}
+
+  @media(min-width:425px){
+
+  
+  
+    #donate-nav {
+      margin-left: 160px;
+  
+    }
+     
+      .logo-title {
+        font-size: 25px;
+      margin-left: 310px;
+      }
+  
+    
+    
+      .nav-logo {
+        height: 40px;
+        width: 40px;
+        margin-left:-280px;
+      }
+    
+      #quote{
+        margin-bottom: -1500px;
+           font-size:40px;
+    margin-top:500px;
+      }
+    
+    
+       .logo-title.footer{
+        margin-top: 1500px;
+       
+        }
+  }
+
+  @media(min-width:768px){
+
+  }
+    
+    
+    
+    #donate-nav {
+      margin-left: 330px;
+  
+    }
+  
+ 
+.logo-title {
+  font-size: 35px;
+
+}
+
+
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+  margin-left:-275px;
+}
+
+
+
+
+@media(min-width:1440px){
+  
+
+  #donate-nav {
+    
+    height: 66px;
+    margin-top: 55px;
+  
+    margin-left: 0;
+  }
+
+
+}
+
+
+
+
+@media (min-width:1040px){
+.navbar{font-size: 25;}
+      #donate-nav {
+      margin-left: -3px;
+      margin-top: 50px;
+      font-size: 30px;
+      }
+       .navbar-links{
+        margin-top: -60px;
+        margin-right:0px;
+       }
+      }
+      @media (max-width: 1025px) {
+  
+        
+        
+        .toggle-button {
+            display: flex;
+          }
+        
+          .navbar-links {
+            display: none;
+            width: 100%;
+          }
+        
+          .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .navbar-links ul {
+        height: auto;
+            width:100%;
+            padding: 0;
+            flex-direction: column;
+            background-color:#3749726d;
+          }
+          .navbar-links li {
+            text-align: center;
+          }
+        
+          .navbar-links li a {
+            padding: 0.5rem 1rem;
+          }
+        
+          .navbar-links.active {
+          
+            display: flex;
+            position: absolute;
+            z-index: 40;
+            height: 500vh;
+            background-color: #000000;
+          }
+         
+        
+        
+        #donate-nav{
+          background-color:#37497200;
+          border: none;
+          color:#99181a;
+        font-weight: 800;
+margin-top: 5%;
+margin-left: 2px;
+
+        }
+         
+      }
+      
