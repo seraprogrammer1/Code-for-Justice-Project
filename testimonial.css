@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(veteran.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 105% 105%;
+  height: 1000px;
+  font-family: "Roboto";
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+}
+
+/*::-webkit-scrollbar-thumb:hover {
+}*/
+
+/* Carousel */
+.container {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  max-width: 400px;
+  width: 100%;
+  background: #374972;
+  border-radius: 12px;
+  padding: 30px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-padding: 30px;
+  box-shadow: 0 15px 25px rgba(red, green, blue, alpha);
+}
+
+.container .card {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  scroll-snap-align: start;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card .image {
+  height: 150px;
+  width: 150px;
+  padding: 4px;
+  background: rgb(7, 24, 175);
+  border-radius: 50%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgb(184, 11, 12);
+}
+
+.card h2 {
+  margin-top: 25px;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.card {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #404040;
+  text-align: center;
+}
+/* Carousel end */
+/* NAVBAR STYLING START */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d96c;
+  height: 55px;
+  color: white;
+  top: 0%;
+  left: 0%;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  display: block;
+}
+
+.home-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.about-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.testimonials-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+}
+.volunteer-hover:hover {
+  background-color: #3749729e;
+  height: 55px;
+  margin-right: 10px;
+}
+.donate-hover:active {
+  /* background-color: #9b03054b; */
+  height: 59px;
+}
+
+#donate-nav {
+  background-color: rgb(184, 11, 12);
+  border: solid rgb(0, 0, 0) 1px;
+  height: 55px;
+  font-weight: 400;
+}
+.search-bar {
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: #d9d9d96c;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #374972;
+  border-radius: 10px;
+}
+
+.logo-title {
+  color: #374972;
+  font-style: bold;
+  font-weight: 550;
+  letter-spacing: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+}
+.container1 {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 2vh;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center; /* Center align content horizontally */
+}
+.blue-box {
+  background: #374972;
+  margin-right: 20px;
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  height: 200px;
+  width: fit-content;
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.content {
+  flex: 1; /* Allow content section to grow to fill available space */
+}
+
+.video {
+  flex-shrink: 0; /* Prevent video section from shrinking */
+  margin-left: 10px; /* Add some space between content and video */
+}
+
+.video img {
+  max-width: 100%;
+  border-radius: 5px; /* Optional: Add rounded corners to the video thumbnail */
+}
+
+.donate-button {
+  display: inline-block; /* Make the button inline-block to center it horizontally */
+  background-color: rgb(184, 11, 12);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  height: 100px;
+  width: 250px;
+  font-size: 60px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10vh;
+}
+
+.logo-title.footer {
+  background-color: #d9d9d95a;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+}
+
+/* responsive*/
+/* For mobile screens */
+@media only screen and (max-width: 480px) {
+  .blue-box {
+    padding: 20px; /* Adjusted padding for mobile screens */
+    font-size: 1.2rem; /* Adjusted font size for mobile screens */
+    height: auto; /* Adjusted height to auto for responsiveness */
+    width: 90%; /* Adjusted width for mobile screens */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .video img {
+    max-width: 100%; /* Ensure the video image is responsive */
+    height: auto; /* Ensure the video image maintains aspect ratio */
+  }
+
+  .donate-button {
+    padding: 15px 30px; /* Adjusted padding for mobile screens */
+    font-size: 1rem; /* Adjusted font size for mobile screens */
+    height: auto; /* Adjusted height to auto for responsiveness */
+    width: 80%; /* Adjusted width for mobile screens */
+    margin-top: 20px; /* Added margin to separate from blue box */
+  }
+}
+
+/* For large screens */
+@media only screen and (min-width: 769px) {
+  .blue-box {
+    padding: 30px; /* Increase padding for large screens */
+    font-size: 2rem; /* Adjusted font size for large screens */
+    height: auto; /* Adjusted height to auto for responsiveness */
+    width: 80%; /* Adjusted width for large screens */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .video img {
+    max-width: 100%; /* Ensure the video image is responsive */
+    height: auto; /* Ensure the video image maintains aspect ratio */
+  }
+
+  .donate-button {
+    padding: 20px 40px; /* Adjusted padding for large screens */
+    font-size: 1.5rem; /* Adjusted font size for large screens */
+    height: auto; /* Adjusted height to auto for responsiveness */
+    width: 50%; /* Adjusted width for large screens */
+  }
+}
