@@ -44,10 +44,9 @@
         </nav>
     </header>
     <main>
-        <p>place some text here please</p>
         <div>
             <div>
-                <form action="" onsubmit="return verify()" method="">
+                <form action="" onsubmit="" method="">
                     <fieldset id="donateHolder">
                         <h5>Donate amounts</h5>
                         <fieldset>
@@ -85,7 +84,7 @@
                             <label for="donate-other">Other</label>
                             <fieldset id="other-amount-enter-holder">
                                 <label for="other-amount-enter">$</label>
-                                <input type="text" id="other-amount-enter" name="donate">
+                                <input type="number" id="other-amount-enter" name="donate">
                             </fieldset>
                         </fieldset>
                     </fieldset>
@@ -102,22 +101,23 @@
                     </fieldset>       
                     <fieldset id="contactHolder">
                         <h2>Contact Information</h2>
-                        <p class="small-gray-p-tag">* indicates a required field</p>
+                        <p id="small-gray-p-tag">* indicates a required field</p>
+                        <p id="large-red-p-tag">Please Complete all Require*</p>
                         <fieldset class="set" id="nameHolder">
                             <span name="Firstname">
                                 <label for="firstName">First name*</label>
-                                <input id="firstName" type="text" name="Firstname" required>
+                                <input id="firstName" type="text" name="Firstname" class="required">
                             </span>
                             <span name="Lastname">
                                 <label for="lastName">Last name*</label>
-                                <input id="lastName" type="text" name="Lastname" required>
+                                <input id="lastName" type="text" name="Lastname" class="required">
                             </span>
                         </fieldset>
                         <fieldset id="addressHolder">
                             <fieldset class="set grow">
                                 <span>
                                     <label for="street1">Street 1*</label>
-                                    <input id="street1" type="text" name="address" required>
+                                    <input id="street1" type="text" name="address" class="required">
                                 </span>
                             </fieldset>
                             <fieldset class="set grow">
@@ -129,11 +129,11 @@
                            <fieldset id="cityStateZipHolder" class="set grow">
                                 <span>
                                 <label for="city">City*</label>
-                                <input id="city" type="text" class="f-grow" name="cityStateZip">
+                                <input id="city" type="text" class="f-grow required" name="cityStateZip">
                                 </span>
                                 <span id="state-span">
                                     <label for="states">States*</label>
-                                    <select name="states" id="states" class="f-grow" required>
+                                    <select name="states" id="states" class="f-grow required">
                                         <option value="" selected>-Please Select-</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -189,24 +189,24 @@
                                 </span>
                                 <span>
                                     <label for="postal-code">Postal Code*</label>
-                                    <input id="postal-code" type="text" name="cityStateZip">
+                                    <input id="postal-code" class="required" type="text" name="cityStateZip">
                                 </span>
                            </fieldset>
                            <fieldset class="set" id="email-phoneHolder">
                                 <span id="email-grow">
                                     <label for="email">Email Address*</label>
-                                    <input id="email" type="email" name="email" required>
+                                    <input id="email" type="email" name="email" class="required">
                                 </span>
                                 <span>
                                     <label for="phone">Phone:</label>
-                                    <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" >
+                                    <input id="phone" class="required" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" >
                                 </span>
                            </fieldset>
                         </fieldset>
                     </fieldset>  
                     <fieldset id="paymentHolder">
                         <h2>Payment Information</h2>
-                        <select name="payment-type" class="remove-required" required>
+                        <select name="payment-type" class="required">
                             <option value="" selected>Select a Payment Type</option>
                             <option value="Visa">Visa</option>
                             <option value="MasterCard">MasterCard</option>
@@ -216,13 +216,13 @@
                         <fieldset id="cardHolder" class="set">
                             <span>
                                 <label for="cnn">Credit Card Number</label>
-                                <input id="cnn" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" type="tel" class="remove-required" required>
+                                <input id="cnn" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" type="tel" class="required">
                             </span>
                             <span>
                                 <fieldset>
                                     <p class="space">Expiration Date</p>
                                     <label for="expire-month"></label>
-                                    <select name="expire-month" id="expire-month" class="remove-required" required>
+                                    <select name="expire-month" id="expire-month" class="required">
                                         <option value="" selected disabled>Month</option>
                                         <option value="01">January</option>
                                         <option value="02">February</option>
@@ -238,7 +238,7 @@
                                         <option value="12">December</option>                  
                                     </select>
                                     <label for="expire-year"></label>
-                                    <select name="expire-year" id="expire-year" class="remove-required"  required>
+                                    <select name="expire-year" id="expire-year"  class="required">
                                         <option value="" selected disabled>Year</option>
                                         <option value="01">2024</option>
                                         <option value="02">2025</option>
@@ -253,7 +253,7 @@
         
                             <span>
                                 <label for="cvv">CVV Number</label>
-                                <input id="cvv" type="number" class="remove-required" required>
+                                <input id="cvv" type="number" class="required">
                             </span>
                         </fieldset>
                     </fieldset>

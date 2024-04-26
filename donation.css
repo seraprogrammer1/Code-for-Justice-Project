@@ -229,10 +229,16 @@ main > p {
     margin-top: 10px;
   }
 
-  .small-gray-p-tag {
+  #small-gray-p-tag {
     font-size: 10px;
     color: rgb(146, 146, 146);
     margin-bottom: 20px;
+  }
+  #large-red-p-tag {
+    font-size: 25px;
+    color: red;
+    margin-bottom: 20px;
+    display: none;
   }
 
   other-amount-enter-holder{
@@ -476,3 +482,96 @@ align-items: center;
     flex-direction: column;
   }
 }
+
+@media (min-width:320px){
+  .navbar {
+    font-size:35px;
+  }
+ .navbar-links{
+  margin-top: 59px;
+ }
+ .navbar-links a{
+  margin-top: 45px;
+ }
+ #donate-nav {
+  margin-top:40px;
+  margin-left: 110px;
+font-size:35px;
+}
+.logo-title{
+font-size: 1.6rem;
+}
+.nav-logo{
+  margin-left: -50px;
+}}
+
+@media (min-width:375px){
+ #donate-nav {
+  margin-top:40px;
+  margin-left: 140px;
+font-size:35px;
+}
+
+
+.logo-title {
+  font-size: 25px;
+}
+.nav-logo {
+  height: 50px;
+  width: 50px;
+  margin-left:15px;
+}
+
+}
+
+@media (min-width:425px){
+
+#donate-nav {
+  margin-left: 160px;
+}
+ 
+  .logo-title {
+    font-size: 25px;
+  }
+
+  .nav-logo {
+    height: 50px;
+    width: 50px;
+    margin-left:15px;
+  }
+}
+
+@media (min-width:768px){
+
+  #donate-nav {
+    margin-left: 330px;
+  }
+  }
+
+@media (min-width:1024px){
+
+    #donate-nav {
+      margin-left: 458px;
+    }
+     
+    }
+
+@media (min-width:1040px){
+.navbar{font-size: 25;}
+      #donate-nav {
+      margin-left: -3px;
+      margin-top: 50px;
+      font-size: 30px;
+      }
+       .navbar-links{
+        margin-top: -60px;
+        margin-right:0px;
+       }
+      }
+  
+
+
+
+
+
+

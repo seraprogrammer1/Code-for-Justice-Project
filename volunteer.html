@@ -43,28 +43,28 @@
         </nav>
     </header>
     <main>
-        <p>place some text here please</p>
         <div>
             <div>
                 <form action="" onsubmit="return verify()" method="">      
                     <fieldset id="contactHolder">
                         <h2>Contact Information</h2>
-                        <p class="small-gray-p-tag">* indicates a required field</p>
+                        <p id="small-gray-p-tag">* indicates a required field</p>
+                        <p id="large-red-p-tag">Please Complete all Require*</p>
                         <fieldset class="set" id="nameHolder">
                             <span name="Firstname">
                                 <label for="firstName">First name*</label>
-                                <input id="firstName" type="text" name="Firstname" required>
+                                <input id="firstName" class="required" type="text" name="Firstname">
                             </span>
                             <span name="Lastname">
                                 <label for="lastName">Last name*</label>
-                                <input id="lastName" type="text" name="Lastname" required>
+                                <input id="lastName" class="required" type="text" name="Lastname">
                             </span>
                         </fieldset>
                         <fieldset id="addressHolder">
                             <fieldset class="set grow">
                                 <span>
                                     <label for="street1">Street 1*</label>
-                                    <input id="street1" type="text" name="address" required>
+                                    <input id="street1" class="required" type="text" name="address">
                                 </span>
                             </fieldset>
                             <fieldset class="set grow">
@@ -76,11 +76,11 @@
                            <fieldset id="cityStateZipHolder" class="set grow">
                                 <span>
                                 <label for="city">City*</label>
-                                <input id="city" type="text" class="f-grow" name="cityStateZip">
+                                <input id="city" type="text" class="f-grow required" name="cityStateZip">
                                 </span>
                                 <span id="state-span">
                                     <label for="states">States*</label>
-                                    <select name="states" id="states" class="f-grow" required>
+                                    <select name="states" id="states" class="f-grow required">
                                         <option value="" selected>-Please Select-</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -136,23 +136,23 @@
                                 </span>
                                 <span>
                                     <label for="postal-code">Postal Code*</label>
-                                    <input id="postal-code" type="text" name="cityStateZip">
+                                    <input id="postal-code" type="text" class="required" name="cityStateZip">
                                 </span>
                            </fieldset>
                            <fieldset class="set" id="email-phoneHolder">
                                 <span id="email-grow">
                                     <label for="email">Email Address*</label>
-                                    <input id="email" type="email" name="email" required>
+                                    <input id="email" type="email" name="email" class="required">
                                 </span>
                                 <span>
                                     <label for="phone">Phone*</label>
-                                    <input id="phone" type="tel" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                                    <input id="phone" class="required" type="tel" name="phone" placeholder="123-456-6789">
                                 </span>
                            </fieldset>
                         </fieldset>
                     </fieldset> 
                     <fieldset id="best-contactHolder">
-                        <h5>What is the best way to contact you?</h5>
+                        <p>What is the best way to contact you?</p>
                         <span>
                             <input checked type="radio" id="best-phone" name="best-contact">
                             <label for="best-phone">Email</label>
@@ -164,7 +164,7 @@
                     </fieldset>
                     <fieldset id="availabilityHolder" class="set">
                         <span>
-                            <h5 class="space">What is the best time for us to contact you?</h5>
+                            <p class="space">What is the best time for us to contact you?</p>
                             <label for="availability-time"></label>
                             <select class="" id="availability-time" name="availability-time">
                                 <option value="" selected>-Please Select-</option>
@@ -195,7 +195,7 @@
                         </span>
                     </fieldset>
                     <fieldset id="best-dayHolder">
-                        <h5>What days are you constantly available?</h5>
+                        <p>What days are you constantly available?</p>
                         <fieldset>
                             <input type="checkbox" id="monday" name="weekday">
                             <label for="monday">Monday</label>
