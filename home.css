@@ -7,9 +7,9 @@ body {
   margin: 0;
   padding: 0;
  
-  /* background-image: url(images/home/blurry-background\ \(1\).svg); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  background-image: url(images/home/blurry-background\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Roboto";
 }
 
@@ -78,11 +78,7 @@ body {
   /* font-weight: 500; */
   font-size: 25px;
 }
-.search-bar {
-  margin-top: 15px;
-  border-radius: 50px;
-  background-color: #d9d9d96c;
-}
+
 .toggle-button {
   position: absolute;
   top: 0.75rem;
@@ -218,20 +214,19 @@ z-index: 20;} */
   display: none;
 }
 
-/* Base item styles */
 .item {
-  flex: 0 0 80%;  /* 80% of the viewport's width */
-  height: 40vh;  /* Fixed height for better control */
+  flex: 0 0 80%;  
+  height: 40vh;  
   scroll-snap-align: start;
-  position: relative;  /* For absolute positioning inside */
+  position: relative;  
  
 }
 
 /* Image styles */
 .img-1, .img-2 {
-  width: 90%;  /* Responsive width */
-  height: auto;  /* Maintain aspect ratio */
-  display: block;  /* Ensures the image is not positioned oddly */
+  width: 90%;  
+  height: auto;  
+  display: block; 
   align-items: center;
 }
 
@@ -525,6 +520,32 @@ font-size: 1.6rem;
   top: 15%;
 }
 
+/* FOOTER STYLING START */
+  
+.logo-title.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9da;
+  position: relative;
+  margin: 0;
+  font-size: x-small;
+  height: 45px;
+  font-size: 15px;
+}
+
+.footer-span{
+color:#374972;
+font-size: 25PX;
+margin-top: 10px;
+
+}
+.footer-end{
+  margin-top: 17px;
+  color: #9B0305;
+}
+/* FOOTER STYLING END */
 
 
 
@@ -532,6 +553,10 @@ font-size: 1.6rem;
 
 @media (min-width: 375px) {
   
+ 
+ .logo-title.footer{
+  height: 250px;
+ }
   #donate-nav {
     margin-left: 134px;
 
@@ -685,6 +710,17 @@ font-size: 1.6rem;
   }
 
   @media(min-width:768px){
+    .footer .logo-title {
+      flex-direction: column; /* Stack logo and title vertically on smaller screens */
+    }
+  
+    .social-icons {
+      flex-direction: column; /* Stack social icons vertically on smaller screens */
+    }
+  }
+   
+   
+   
     #donate-nav {
       margin-left: 330px;
   
