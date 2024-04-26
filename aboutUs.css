@@ -11,6 +11,7 @@
    background-image: url(images/home/blurry-background\ \(1\).svg);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 225vh; 
   }
    
    /* NAVBAR STYLING START */
